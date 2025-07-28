@@ -1,4 +1,4 @@
-import express from "express"; //esm
+import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 
@@ -16,7 +16,7 @@ app.use(express.json());
 //routes
 app.use("/api/auth", authRoute);
 
-app.get("/", (req, res)=> {
+app.get("/", (req, res) => {
   res.send(`Api running everything is good`);
 });
 app.listen(PORT, ()=>{
