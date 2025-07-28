@@ -19,7 +19,6 @@ A modern, full-stack eCommerce web application built using the MERN (SupaBase, E
 - Order History and Tracking
 - Fully Responsive Design
 
----
+
 
 ## Folder Structure
-
