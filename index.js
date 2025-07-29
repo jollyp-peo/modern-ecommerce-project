@@ -19,6 +19,6 @@ app.use("/api/auth", authRoute);
 app.get("/", (req, res) => {
   res.send(`Api running everything is good`);
 });
-app.listen(PORT, ()=>{
+app.listen(PORT, ()=> {
   console.log(`server is running on ${PORT}`)
 })
