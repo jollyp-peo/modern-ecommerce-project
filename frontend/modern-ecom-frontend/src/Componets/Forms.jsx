@@ -15,38 +15,6 @@ const Forms = () => {
     </form>
   </div>
 
-//   <div className="flex justify-center items-center h-screen bg-green-100">
-//   <form className="bg-white p-8 rounded shadow-md w-full max-w-4xl flex flex-wrap gap-4 justify-between items-center">
-//     <input
-//       type="text"
-//       name="Name"
-//       placeholder="Full Name"
-//       required
-//       className="flex-1 min-w-[200px] px-4 py-2 border border-green-300 rounded-md"
-//     />
-//     <input
-//       type="email"
-//       name="Email"
-//       placeholder="Email"
-//       required
-//       className="flex-1 min-w-[200px] px-4 py-2 border border-green-300 rounded-md"
-//     />
-//     <input
-//       type="tel"
-//       name="phone"
-//       placeholder="Phone"
-//       required
-//       className="flex-1 min-w-[200px] px-4 py-2 border border-green-300 rounded-md"
-//     />
-//     <input
-//       type="submit"
-//       value="Submit"
-//       className="bg-green-700 hover:bg-green-500 active:bg-green-900 rounded text-white text-sm px-8 py-3"
-//     />
-//   </form>
-// </div>
-
-
 
   )
 }
