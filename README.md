@@ -4,8 +4,8 @@ A modern, full-stack eCommerce web application built using the MERN (SupaBase, E
 
 ## Authors
 - Iyenagbe Raymond: iyenagberaymond@gmail.com
-- 
-- 
+- Peter Ode: erubizzltd@gmail.com
+- Olusayo Obabiyi: obabiyiolusayo@gmail.com
 - 
 - 
 
