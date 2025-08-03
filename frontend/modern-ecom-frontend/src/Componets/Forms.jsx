@@ -2,7 +2,7 @@ import React from 'react'
 
 const Forms = () => {
   return (
-  <div className="flex justify-center items-center h-screen bg-green-100">
+  <div className="flex items-center h-screen bg-green-100">
     <form className="bg-white p-8 rounded shadow-md w-full max-w-md space-y-4">
     <input type="text" name="Name" placeholder="Full Name" required className="px-4 py-2 border border-green-300 rounded-md"
     />
