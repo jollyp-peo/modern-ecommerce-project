@@ -4,9 +4,9 @@ import { supabase } from "../utilis/supabaseClient.js";
 
 // Register User
 export const registerUser = async (req, res) => {
-  const { first_name, last_name, username, email, password } = req.body;
+  const { firstname, lastname, username, email, password } = req.body;
 
-  if (!first_name || !last_name || !username || !email || !password) {
+  if (!firstname || !lastname || !username || !email || !password) {
     return res.status(400).json({ message: 'All fields are required.' });
   }
 
@@ -23,13 +23,14 @@ export const registerUser = async (req, res) => {
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  const { error } = await supabase.from('users').insert([
+  const {data, error } = await supabase.from('users').insert([
     {
-      first_name,
-      last_name,
+      firstname,
+      lastname,
       username,
       email,
       password: hashedPassword,
+      role: "user"
     },
   ]);
 
@@ -46,7 +47,7 @@ export const loginUser = async (req, res) => {
   const { identifier, password } = req.body;
 
   if (!identifier || !password) {
-    return res.status(400).json({ message: 'Identifier and password required.' });
+    return res.status(400).json({ message: 'Username/email and password required.' });
   }
 
   const { data: user, error } = await supabase
@@ -66,7 +67,7 @@ export const loginUser = async (req, res) => {
   }
 
   const token = jwt.sign({ id: user.id, username: user.username }, process.env.JWT_SECRET, {
-    expiresIn: '7d',
+    expiresIn: '1m',
   });
 
   return res.status(200).json({
@@ -74,8 +75,8 @@ export const loginUser = async (req, res) => {
     token,
     user: {
       id: user.id,
-      first_name: user.first_name,
-      last_name: user.last_name,
+      firstname: user.firstname,
+      lastname: user.lastname,
       username: user.username,
       email: user.email,
     },
